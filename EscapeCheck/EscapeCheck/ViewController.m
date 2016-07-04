@@ -11,6 +11,8 @@
 
 @interface ViewController ()
 
+@property (weak, nonatomic) IBOutlet UILabel *jailbrokenLabel;
+
 @end
 
 @implementation ViewController
@@ -34,8 +36,10 @@
         ||[EscapeCheckTool isJailbroken2]
         ||[EscapeCheckTool isJailbroken]) {
         NSLog(@"已经越狱");
+        _jailbrokenLabel.text = @"已经越狱";
     }else{
         NSLog(@"没越狱");
+        _jailbrokenLabel.text = @"没越狱";
     }
 }
 
